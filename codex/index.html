@@ -572,6 +572,14 @@ header.top{position:relative}
 .learn-box{margin:14px 0 4px}
 .learn-box ul{margin:6px 0 10px 20px}
 .learn-box li{margin-bottom:6px;line-height:1.75}
+.cwc-box{overflow-x:auto;margin:10px 0 14px}
+.cwc{border-collapse:collapse;width:100%;min-width:720px;background:var(--card)}
+.cwc th,.cwc td{border:1px solid var(--line);padding:11px 13px;font-size:15.5px;vertical-align:top;line-height:1.7;text-align:left}
+.cwc th{background:var(--th);font-weight:800}
+.cwc th.on{background:var(--accent);color:#fff}
+.cwc td.on{background:var(--note)}
+.cwc td:first-child{white-space:nowrap;background:var(--th);font-size:15px}
+.cwc-tag{display:inline-block;background:#fff;color:var(--accent);border-radius:99px;padding:1px 9px;font-size:12.5px;font-weight:800;margin-left:6px;vertical-align:middle}
 </style></head><body>
 <header class="top" id="top">
   <a class="home-btn" href="../index.html">🏠 홈으로</a>
@@ -592,7 +600,7 @@ header.top{position:relative}
 <div><dt>오늘 만드는 것</dt><dd>내 업무를 나눠 맡는 AI 팀(담당 에이전트 3명 + 총괄) 과 보고 대시보드</dd></div>
 <div class="wide"><dt>실습 회사</dt><dd>순천정밀 (가상) · 금속가공 · 원청 A사·B사 · 직원 28명. 이 교안의 이름, 수치, 파일은 모두 연습용으로 만든 자료입니다.</dd></div>
 </dl>
-<h2 class="sec-title">AI 팀은 이렇게 일합니다</h2>
+<h2 class="sec-title">먼저 · 챗지피티의 <b>Chat · Work · Codex</b>는 뭐가 다른가요</h2><p class="lead">같은 챗지피티 안에 있지만 <b>하는 일이 다릅니다.</b> 오늘 쓰는 건 <b>Codex</b>예요. “이거 개발자용 아닌가요?”라는 질문에 먼저 답하고 시작합니다.</p><div class="cwc-box"><table class="cwc"><tr><th style="width:16%"></th><th>💬 Chat</th><th>🛠️ Work</th><th class="on">🤖 Codex <span class="cwc-tag">오늘</span></th></tr><tr><td><b>무엇을</b></td><td>묻고 답하기<br><span class="subtle">질문·검색·아이디어</span></td><td>여러 단계 긴 작업으로 <b>완성된 결과물</b> 만들기<br><span class="subtle">조사·분석, 문서·스프레드시트·보고서·사이트</span></td><td class="on"><b>내 폴더에서 파일을 만들고 바꾸기</b><br><span class="subtle">원래는 개발·기술 작업용 — 오늘은 <b>파일을 다루는 팀</b>으로 씁니다</span></td></tr><tr><td><b>어디서 도나</b></td><td>웹·모바일·데스크톱</td><td>웹·모바일은 <b>클라우드</b><br>데스크톱은 허용·승인하면 <b>내 파일</b>도</td><td class="on"><b>데스크톱 앱에서만</b><br><span class="subtle">내 폴더·터미널을 직접 씁니다</span></td></tr><tr><td><b>결과가 남는 곳</b></td><td>대화창</td><td>만들어진 결과물</td><td class="on"><b>내 컴퓨터 폴더의 파일</b><br><span class="subtle">output 폴더에 쌓입니다</span></td></tr><tr><td><b>언제 쓰나</b></td><td>“이거 뭐야?” 한 번 물을 때</td><td>“보고서 한 편 만들어줘”</td><td class="on">“<b>매주 반복되는 이 일</b>을 팀에게 맡기고 싶다”</td></tr></table></div><div class="note"><b>💡 한 줄로</b> Chat은 <b>묻고 답하기</b>, Work는 <b>결과물 만들기</b>, Codex는 <b>내 폴더에서 일하는 팀 만들기</b>입니다. 오늘 만드는 AI 팀은 한 번 만들어 두면 <b>다음 주에도 같은 폴더에서 그대로</b> 돌아갑니다.</div><p class="subtle">※ Work와 Codex는 <b>사용량(한도)을 같이 씁니다.</b> 오늘 담당 에이전트를 3명으로 시작하는 이유이기도 합니다. 화면 구성과 이름은 앱 버전에 따라 달라질 수 있어요. <a href="https://help.openai.com/ko-kr/articles/20001275-chatgpt-work-%EB%B0%8F-codex" target="_blank" rel="noopener">공식 안내</a></p><h2 class="sec-title">AI 팀은 이렇게 일합니다</h2>
 <p class="lead">AI 한 명에게 모든 일을 시키는 대신, 일을 나눠 맡을 팀을 만듭니다. 팀은 일하고, 마지막 결정은 사람이 합니다.</p>
 <div class="ws2"><div class="flow">
 <div class="human"><b>① 사람</b>내 업무를 설명한다</div>
