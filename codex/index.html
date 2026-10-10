@@ -560,6 +560,15 @@ header.top{position:relative}
 .fmt-toggle .try-it{margin:10px 0}
 .cross-check{margin:14px 0 6px}
 .cross-check .try-it{margin:10px 0}
+.deid-box{margin:14px 0 4px}
+.deid-box .try-it{margin:10px 0}
+.deid-box table.t{width:100%;border-collapse:collapse;margin:6px 0 10px}
+.deid-box table.t th,.deid-box table.t td{border:1px solid var(--line);padding:8px 10px;font-size:15px;vertical-align:top;line-height:1.7}
+.deid-box table.t th{background:var(--th);font-weight:700;text-align:left}
+.deid-box .c{text-align:center}
+.deid-box .a3-subtt{margin:16px 0 6px;font-size:16.5px;color:var(--accent)}
+.deid-box ul{margin:4px 0 10px 20px}
+.deid-box li{margin-bottom:4px}
 </style></head><body>
 <header class="top" id="top">
   <a class="home-btn" href="../index.html">🏠 홈으로</a>
@@ -829,7 +838,7 @@ header.top{position:relative}
 <label class="check"><input type="checkbox" data-k="t6b"> 거래처 단가, 계약 금액 같은 민감한 숫자를 가렸다</label>
 <label class="check"><input type="checkbox" data-k="t6c"> 회사 보안 지침이 허용하는 도구와 폴더인지 확인했다</label>
 <label class="check"><input type="checkbox" data-k="t6d"> 원본은 복사본으로 두고 에이전트에는 복사본 폴더만 연결했다</label>
-<label class="check"><input type="checkbox" data-k="t6e"> 판정·확정·발송은 사람이 한다는 규칙을 AGENTS.md에 넣었다</label></div>
+<label class="check"><input type="checkbox" data-k="t6e"> 판정·확정·발송은 사람이 한다는 규칙을 AGENTS.md에 넣었다</label><details class="screen-guide deid-box"><summary>🔒 회사 자료를 밖으로 보낼 때 · 비식별화하고 보내기 (심화과정·자문 요청용)</summary><p>연수에서 <b>방법과 로직</b>은 가져가셨지만, 회사 자료에 적용하다 막히는 지점이 생깁니다. 그때 강사에게 자료를 보내 봐야 하는데 — <b>보내기 싫어서가 아니라 보내도 되는지 몰라서</b> 못 보내는 경우가 많습니다. 아래 순서대로 하면 됩니다.</p><div class="a3-subtt"><b>① 먼저 — 보내는 단계를 셋으로 나눕니다</b></div><table class="t"><tr><th style="width:12%">단계</th><th style="width:44%">보내는 것</th><th>언제</th></tr><tr><td class="c"><b>1</b></td><td><b>구조만</b> — 열 이름, 시트 구성, 파일 목록, 하고 싶은 일 <span class="subtle">(엑셀 첫 줄 캡처 한 장이면 됩니다)</span></td><td><b>대부분 여기서 끝납니다.</b> 로직 자문은 구조만으로 거의 가능합니다</td></tr><tr><td class="c"><b>2</b></td><td>비식별화한 <b>샘플 10~20줄</b></td><td>자료 형식이 지저분해서 직접 봐야 할 때</td></tr><tr><td class="c"><b>3</b></td><td>비식별화한 <b>파일 전체</b></td><td>심화과정에서 실제 파일로 만들 때만</td></tr></table><div class="a3-subtt"><b>② 비식별화 — AI에게 “내용”이 아니라 “스크립트”를 시킵니다</b></div><div class="note"><b>⚠️ 중요</b> 비식별화하려고 원본을 AI에 통째로 올리면, <b>그 순간 원본은 이미 밖으로 나간 겁니다.</b> 그래서 코덱스에게 <b>내용을 읽어 바꾸라</b>고 하지 말고, <b>치환 스크립트를 만들어 실행하라</b>고 시킵니다.</div><blockquote class="try-it first-request">이 파일의 <strong class="prompt-red">열 이름만 보고</strong> 비식별화 스크립트를 파이썬으로 만들어 실행해줘. <strong class="prompt-blue">셀 내용은 화면에 출력하지 마.</strong> 이름·사번·연락처·거래처명은 <strong class="prompt-blue">일관되게 치환</strong>하고(같은 값은 항상 같은 가명으로: ○○전자 → 거래처1), 단가·원가·금액은 <strong class="prompt-blue">비율은 유지한 채 일정 배수로 바꿔줘.</strong> 매핑표는 <strong class="prompt-blue">별도 파일로 내 폴더에만</strong> 저장하고, 결과는 새 파일로 저장해줘. 원본은 건드리지 마.</blockquote><p class="subtle">💡 <b>“일관되게”가 핵심입니다.</b> 그냥 지우면 자문할 게 없어집니다 — “A사 납기 지연이 반복된다”를 보려면 A사가 계속 <b>거래처1</b>로 같아야 하니까요. 매핑표(거래처1=○○전자)는 <b>본인만</b> 갖고 있으면 결과를 원래대로 되읽을 수 있습니다.</p><div class="a3-subtt"><b>③ 무엇을 바꾸고, 무엇을 그대로 둘까</b></div><table class="t"><tr><th style="width:50%">🔁 바꿀 것</th><th>✅ 그대로 둘 것</th></tr><tr><td>직원 이름·사번·연락처<br>고객사명·담당자명<br><b>단가·원가·마진·계약 금액</b><br>도면번호·품번(경쟁사가 알면 안 되는 것)<br>설비 고유번호·거래 조건</td><td>날짜<br>수량·생산량<br>불량 유형·공정 이름<br>설비 종류(프레스, 컨베이어…)<br><span class="subtle">로직에 필요하고 민감하지 않습니다</span></td></tr></table><div class="a3-subtt"><b>④ 놓치기 쉬운 세 가지</b></div><ul><li><b>엑셀 파일 속성</b>에 작성자·회사명이 남습니다 → <b>파일 → 정보 → 문제 확인 → 문서 검사 → 개인 정보 제거</b></li><li><b>숨긴 시트</b>와 필터로 가려진 행 → 숨기기 취소하고 확인</li><li>사진으로 찍은 <b>작업지시서·명판</b> 속 글자 → 사진도 자료입니다</li></ul><div class="note"><b>🚦 비식별화해도 “반출”은 반출입니다</b> 도면·원가·고객 정보는 반출 자체가 계약 위반인 경우가 있습니다(특히 대기업 협력사). <b>사내 규정상 내보낼 수 있는 자료인지 먼저 확인</b>하세요. 확실하지 않으면 <b>1단계(구조만)</b>로 보내면 됩니다.</div><div class="a3-subtt"><b>⑤ 막히면 이렇게 보내 주세요</b></div><ul><li>① 하고 싶은 일 한 줄 ② 지금 막힌 지점 ③ <b>구조</b>(열 이름·파일 목록) ④ 필요하면 비식별화한 샘플</li><li>보내실 때 <b>“비식별화 확인했습니다”</b> 한 줄을 같이 적어 주세요.</li></ul><p><a class="link-btn" href="mailto:ai@flowdx.kr?subject=%5B%EC%88%9C%EC%B2%9C%EB%8C%80%20AI%20%EC%97%B0%EC%88%98%5D%20%EC%97%85%EB%AC%B4%20%EC%A0%81%EC%9A%A9%20%EB%AC%B8%EC%9D%98">📩 ai@flowdx.kr 로 보내기</a></p></details></div>
 <div class="card"><h3>4. 알아 둘 한계</h3><ul>
 <li>에이전트는 틀릴 수 있습니다. 근거를 달게 하고 사람이 원본과 대조합니다.</li>
 <li>“자기 폴더의 자료만 읽기”는 에이전트에게 주는 <b>행동 규칙</b>입니다. 폴더 접근을 기술적으로 막는 보안 장치가 아니므로, 정말 민감한 자료는 아예 넣지 않거나 회사 보안 지침을 따르세요.</li>
